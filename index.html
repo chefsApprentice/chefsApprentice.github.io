@@ -39,7 +39,7 @@
   <!-- <div style="display: flex; justify-content: flex-end; z-index: 99; margin-bottom: -300px;">
     <img src="./images/Component 2 (1).png">
   </div> -->
-
+<div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
   <div id="wrapper">
     <!-- Intro -->
     <section id="intro" class="wrapper style1 fullscreen fade-up">
@@ -55,12 +55,12 @@
           </h1>
         </div>
 
-      <div class="wrapper style5">
-        <p style="font-family: 'Roboto Mono', monospace;
+        <div class="wrapper style5">
+          <p style="font-family: 'Roboto Mono', monospace;
   color: rgba(255, 255, 255, 0.35); ">
-          I am a first year uni student studying a bachelors in computer science.
-          <!-- <a href="http://html5up.net">HTML5 UP</a><br /> -->
-        </p>
+            I am a first year uni student studying a bachelors in computer science.
+            <!-- <a href="http://html5up.net">HTML5 UP</a><br /> -->
+          </p>
         </div>
         <table style="font-family: 'Roboto mono', monospace; font-weight: lighter;">
           <tr>
@@ -81,16 +81,16 @@
 
     <!-- One -->
     <section id="one" class="wrapper style2 spotlights">
-    
+
       <section>
-        <a href="#" class="image"><img src="images/pic03.jpg" alt="" data-position="25% 25%" /></a>
+        <a href="#" class="image"><img src="images/debate.png" alt="" data-position="25% 25%" /></a>
         <div class="content">
           <div class="inner">
             <h2>Debate social media app</h2>
             <p>Technologies: Typescript, React, GraphQL, PostregSQL, Nodejs, Express, GIT</p>
             <p>
-           Full stack web app made for my International Baccalaureate diploma. Involved
-creations of documentation and a product within time constraints per client request.
+              Full stack web app made for my International Baccalaureate diploma. Involved
+              creations of documentation and a product within time constraints per client request.
             </p>
             <ul class="actions">
               <li><a href="generic.html" class="button">Live demo</a></li>
@@ -102,15 +102,15 @@ creations of documentation and a product within time constraints per client requ
           </div>
         </div>
       </section>
-   <section>
-        <a href="#" class="image"><img src="images/pic03.jpg" alt="" data-position="25% 25%" /></a>
+      <section>
+        <a href="#" class="image"><img src="images/gallery.jpg" alt="" data-position="25% 25%" /></a>
         <div class="content">
           <div class="inner">
             <h2>Group voting system AI</h2>
             <p>Technologies: JS, Node, Svelte, Python, GIT</p>
             <p>
-             Group project that detected the thumb up-to-down ratio within a group. Created in 48
-hours for the Royal Hackathon 7 hackathon. 
+              Group project that detected the thumb up-to-down ratio within a group. Created in 48
+              hours for the Royal Hackathon 7 hackathon.
             </p>
             <ul class="actions">
               <li><a href="generic.html" class="button">Live demo</a></li>
@@ -122,11 +122,130 @@ hours for the Royal Hackathon 7 hackathon.
           </div>
         </div>
       </section>
-        </div>
-    </section>
+  </div>
+  </section>
 
-    <!-- Two -->
-    <!-- <section id="two" class="wrapper style3 fade-up">
+  <!-- Three -->
+  <section id="three" class="wrapper style1 fade-up">
+    <div class="inner">
+      <h2>Get in touch</h2>
+      <p>
+        Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam
+        turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus,
+        lacus eget hendrerit bibendum, urna est aliquam sem, sit amet
+        imperdiet est velit quis lorem.
+      </p>
+      <div class="split style1">
+        <section>
+          <form onsubmit=" sendEmail(); reset(); return false;" method="post" enctype="text/plain">
+            <div class="fields">
+              <div class="field half">
+                <label for="name">Name</label>
+                <input type="text" required name="name" id="name" />
+              </div>
+              <div class="field half">
+                <label for="email">Email</label>
+                <input type="email" required name="email" id="email" pattern=".+@\.+\." />
+              </div>
+              <div class="field">
+                <label for="message">Message</label>
+                <textarea name="message" required id="message" rows="5"></textarea>
+              </div>
+            </div>
+            <ul class="actions">
+              <li><a href="" class="button submit">Send Message</a></li>
+            </ul>
+          </form>
+          <script src="https://smtpjs.com/v3/smtp.js"></script>
+          <script>
+            let checkEmail = () => {
+              let email = document.getElementById("email").value;
+              let re = new RegExp(".+@\.+\.");
+              if (email == "") return false;
+              else if (!re.test(email)) { return false };
+              if (document.getElementById("message").value == "") return false;
+              if (document.getElementById("name").value == "") return false;
+              return true;
+            }
+
+            let sendEmail = () => {
+              if (!checkEmail()) { alert("Please submit the form correctly"); return; };
+              console.log("Excuse me");
+              //   Email.send({
+              //       // api: "",
+              //       Host : "smtp.elasticemail.com",
+              //     SecureToken: "b17ac4c1-7b51-47c4-8c3d-b139b024df16",
+              //     Username : "myPortfolio@stmp.elastimail.com",
+              //     Password : "5EADEA60130E6A5AA07CC938BA244F86C0D2",
+              //     // To : 'Robin.Jamshidi.2023@live.rhul.ac.uk ',
+              //     To:"cyberSimilie@proton.me",
+              //     From :  document.getElementById("email").value,
+              //     Subject : "Someone contacted via portfolio!" ,
+              //     Body : document.getElementById("message").value + " My name is : " +  document.getElementById("name").value + " My email is:" + document.getElementById("email").value
+              //     // Body: "It works"
+              // }).then(
+              //   //  message => alert(message))
+              // )
+              // .catch((e) => {console.log(e)})
+            }
+          </script>
+        </section>
+        <section>
+          <ul class="contact">
+            <!-- <li>
+                <h3>Address</h3>
+                <span> -->
+            <!-- George Eliot, Chestnut Drive, Englefield Green<br /> -->
+            <!-- Royal Holloway <br />
+                  Egham, Surrey,<br />
+                  England</span>
+              </li> -->
+            <li>
+              <h3>Email</h3>
+              <a href="#">robinjamshidi@gmail.com</a>
+            </li>
+            <li>
+              <h3>Phone</h3>
+              <span>(+44) 7824679698</span>
+            </li>
+            <li>
+              <h3>Social</h3>
+              <ul class="icons">
+                <li>
+                  <a href="https://github.com/chefsApprentice" class="icon brands fa-github"><span
+                      class="label">GitHub</span></a>
+                </li>
+                <li>
+                  <a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </section>
+  </div>
+</div>
+  <!-- Footer -->
+  <footer id="footer" class="wrapper style1-alt">
+
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.scrollex.min.js"></script>
+  <script src="assets/js/jquery.scrolly.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
+
+<!-- Two -->
+<!-- <section id="two" class="wrapper style3 fade-up">
         <div class="inner">
           <h2>What we do</h2>
           <p>
@@ -190,122 +309,3 @@ hours for the Royal Hackathon 7 hackathon.
           </ul>
         </div>
       </section> -->
-
-    <!-- Three -->
-    <section id="three" class="wrapper style1 fade-up">
-      <div class="inner">
-        <h2>Get in touch</h2>
-        <p>
-          Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam
-          turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus,
-          lacus eget hendrerit bibendum, urna est aliquam sem, sit amet
-          imperdiet est velit quis lorem.
-        </p>
-        <div class="split style1">
-          <section>
-            <form onsubmit=" sendEmail(); reset(); return false;" method="post" enctype="text/plain">
-              <div class="fields">
-                <div class="field half">
-                  <label for="name">Name</label>
-                  <input type="text" required name="name" id="name" />
-                </div>
-                <div class="field half">
-                  <label for="email">Email</label>
-                  <input type="email" required name="email" id="email" pattern=".+@\.+\." />
-                </div>
-                <div class="field">
-                  <label for="message">Message</label>
-                  <textarea name="message" required id="message" rows="5"></textarea>
-                </div>
-              </div>
-              <ul class="actions">
-                <li><a href="" class="button submit">Send Message</a></li>
-              </ul>
-            </form>
-            <script src="https://smtpjs.com/v3/smtp.js"></script>
-            <script>
-              let checkEmail = () => {
-                let email = document.getElementById("email").value;
-                let re = new RegExp(".+@\.+\.");
-                if (email == "") return false;
-                else if (!re.test(email)) { return false };
-                if (document.getElementById("message").value == "") return false;
-                if (document.getElementById("name").value == "") return false;
-                return true;
-              }
-
-              let sendEmail = () => {
-                if (!checkEmail()) { alert("Please submit the form correctly"); return; };
-                console.log("Excuse me");
-                //   Email.send({
-                //       // api: "",
-                //       Host : "smtp.elasticemail.com",
-                //     SecureToken: "b17ac4c1-7b51-47c4-8c3d-b139b024df16",
-                //     Username : "myPortfolio@stmp.elastimail.com",
-                //     Password : "5EADEA60130E6A5AA07CC938BA244F86C0D2",
-                //     // To : 'Robin.Jamshidi.2023@live.rhul.ac.uk ',
-                //     To:"cyberSimilie@proton.me",
-                //     From :  document.getElementById("email").value,
-                //     Subject : "Someone contacted via portfolio!" ,
-                //     Body : document.getElementById("message").value + " My name is : " +  document.getElementById("name").value + " My email is:" + document.getElementById("email").value
-                //     // Body: "It works"
-                // }).then(
-                //   //  message => alert(message))
-                // )
-                // .catch((e) => {console.log(e)})
-              }
-            </script>
-          </section>
-          <section>
-            <ul class="contact">
-              <!-- <li>
-                <h3>Address</h3>
-                <span> -->
-              <!-- George Eliot, Chestnut Drive, Englefield Green<br /> -->
-              <!-- Royal Holloway <br />
-                  Egham, Surrey,<br />
-                  England</span>
-              </li> -->
-              <li>
-                <h3>Email</h3>
-                <a href="#">robinjamshidi@gmail.com</a>
-              </li>
-              <li>
-                <h3>Phone</h3>
-                <span>(+44) 7824679698</span>
-              </li>
-              <li>
-                <h3>Social</h3>
-                <ul class="icons">
-                  <li>
-                    <a href="https://github.com/chefsApprentice" class="icon brands fa-github"><span
-                        class="label">GitHub</span></a>
-                  </li>
-                  <li>
-                    <a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </section>
-        </div>
-      </div>
-    </section>
-  </div>
-
-  <!-- Footer -->
-  <footer id="footer" class="wrapper style1-alt">
-
-  </footer>
-
-  <!-- Scripts -->
-  <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/jquery.scrollex.min.js"></script>
-  <script src="assets/js/jquery.scrolly.min.js"></script>
-  <script src="assets/js/browser.min.js"></script>
-  <script src="assets/js/breakpoints.min.js"></script>
-  <script src="assets/js/util.js"></script>
-  <script src="assets/js/main.js"></script>
-</body>
-
-</html>
