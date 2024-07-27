@@ -3290,6 +3290,10 @@ table.alt tfoot {
 
 .wrapper {
   position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .wrapper > .inner {
@@ -3447,7 +3451,7 @@ body.is-preload .wrapper.fade > .inner {
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
-  background-color: #000000;
+  /* background-color: #000000; */
   cursor: default;
   padding: 1.75em 2em;
 }
@@ -3485,6 +3489,7 @@ body.is-preload .wrapper.fade > .inner {
 }
 
 #header > nav > ul > li a {
+  font-family: "Roboto Mono", monospace;
   border: 0;
   color: rgba(255, 255, 255, 0.35);
   display: inline-block;
@@ -3653,6 +3658,13 @@ body.is-ie #sidebar > .inner {
   opacity: 1;
   padding: 0;
   position: relative;
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#sidebar nav > ul > li > a {
   font-family: "Roboto Mono", monospace;
 }
 
@@ -3937,11 +3949,7 @@ body.is-preload #sidebar nav ul li {
 /* Intro */
 
 #intro {
-  background-attachment: fixed;
-  background-image: url("images/intro.svg");
-  background-position: top right;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background: 0;
 }
 
 #intro p {
