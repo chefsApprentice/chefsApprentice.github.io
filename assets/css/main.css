@@ -2653,6 +2653,10 @@ input[type="radio"] + label:before {
   color: #000aff;
 }
 
+.wrapper.style5 {
+  color: #000aff;
+}
+
 .wrapper.style3-alt .icon.major:before {
   color: #000aff;
 }
@@ -3290,10 +3294,6 @@ table.alt tfoot {
 
 .wrapper {
   position: relative;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
 }
 
 .wrapper > .inner {
@@ -3342,6 +3342,13 @@ table.alt tfoot {
 
 .wrapper.style3 {
   background-color: #000000;
+}
+
+.wrapper.style5 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .wrapper.style3-alt {
