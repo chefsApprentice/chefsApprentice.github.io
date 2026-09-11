@@ -621,7 +621,7 @@ div.selected-frame> ::-webkit-scrollbar-thumb {
   body {
     height: 100%;
     padding: 2vw;
-    margin-top: 100px;
+    margin-top: 0;
     overflow-y: scroll !important;
     overflow-x: hidden;
   }
@@ -649,7 +649,7 @@ div.selected-frame> ::-webkit-scrollbar-thumb {
   }
 
   #main-container {
-    height: 110%;
+    height: auto;
   }
 
   #section-container {
@@ -657,17 +657,18 @@ div.selected-frame> ::-webkit-scrollbar-thumb {
     gap: 1rem;
   }
 
-  #left-section {
+  #skills {
     display: none;
   }
 
   #right-section {
     width: 100%;
-    height: 120%;
-    padding-top: 2rem;
+    height: auto;
+    padding-top: 0;
   }
 
   #main-content {
+    min-width: 0;
     font-size: 1.2rem;
   }
 
@@ -675,6 +676,27 @@ div.selected-frame> ::-webkit-scrollbar-thumb {
     flex: none;
     height: auto;
     min-height: 0;
+  }
+
+  #experience.pane,
+  #projects.pane {
+    flex: none;
+    max-height: none;
+    height: auto;
+  }
+
+  .experience-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.2rem;
+  }
+
+  .experience-meta {
+    flex-wrap: wrap;
+    white-space: normal;
+    gap: 0.2rem 0.6rem;
+    font-size: 0.8rem;
+    line-height: 1.2rem;
   }
 
   .pane-content {
@@ -692,13 +714,6 @@ div.selected-frame> ::-webkit-scrollbar-thumb {
     display: none;
   }
 
-  .container {
-    height: fit-content !important;
-  }
-
-  .container {
-    height: fit-content !important;
-  }
 
   .ui-list {
     font-size: 1.2rem;
@@ -734,113 +749,18 @@ div.selected-frame> ::-webkit-scrollbar-thumb {
     width: initial;
   }
 
-  /* NAVBAR */
+  /* NAVBAR - hidden on mobile: no logo, no hamburger */
   .nav-container {
-    display: flex;
-    position: fixed;
-    top: 0;
-    left: 0;
-    justify-content: space-around;
-    align-items: center;
-    padding: 0 5vw;
-    width: 100vw;
-    height: 110px;
-    background-color: var(--clr-primary-bg);
-    opacity: 0.9;
-    z-index: 98;
-  }
-
-  #logo-container {
     display: none;
   }
 
-  .nav-container img {
-    position: relative;
-    bottom: 5px;
-    width: 70%;
-  }
-
-  #hamburger-menu {
-    position: relative;
-    left: -16px;
-    width: 32px;
-  }
-
-  .nav-container .checkbox {
-    display: block;
-    position: relative;
-    height: 32px;
-    width: 32px;
-    cursor: pointer;
-    opacity: 0;
-    z-index: 5;
-    background: transparent;
-    box-shadow: none;
-    outline: none !important;
-    -webkit-tap-highlight-color: transparent !important;
-  }
-
-  .nav-container .hamburger-lines {
-    height: 26px;
-    width: 30px;
-    top: 0;
-    position: absolute;
-    z-index: 2;
+  /* Left column in normal flow: About, then Contact */
+  #left-section {
+    position: static;
+    transform: none;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-  }
-
-  .nav-container .hamburger-lines .line {
-    display: block;
-    height: 4px;
     width: 100%;
-    border: 0.1px solid var(--clr-primary-txt);
   }
 
-  .nav-container .hamburger-lines .line1 {
-    transform-origin: 0% 0%;
-    transition: transform 0.2s ease-in-out;
-  }
-
-  .nav-container .hamburger-lines .line2 {
-    transition: transform 0.2s ease-in-out;
-  }
-
-  .nav-container .hamburger-lines .line3 {
-    transform-origin: 0% 100%;
-    transition: transform 0.2s ease-in-out;
-  }
-
-  #left-section {
-    transform: translate(150%);
-    width: 97vw;
-    display: flex;
-    position: fixed;
-    left: 1.5vw;
-    transition: transform 0.5s ease-in-out;
-    z-index: 99;
-    background-color: var(--clr-primary-bg);
-  }
-
-  .menu-open {
-    transform: translate(0) !important;
-    position: absolute !important;
-  }
-
-  .nav-container input[type="checkbox"]:checked~.hamburger-lines .line1 {
-    transform: rotate(45deg);
-  }
-
-  .nav-container input[type="checkbox"]:checked~.hamburger-lines .line2 {
-    transform: scaleY(0);
-  }
-
-  .nav-container input[type="checkbox"]:checked~.hamburger-lines .line3 {
-    transform: rotate(-45deg);
-  }
-
-  #skills {
-    flex-grow: 1;
-  }
 }

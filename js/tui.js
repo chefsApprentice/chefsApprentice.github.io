@@ -51,10 +51,6 @@ function setupBibleReloadButton(button) {
     return;
   }
 
-  button.addEventListener("click", async () => {
-    await displayRandomBibleVerse();
-  });
-
   button.addEventListener("mouseleave", () => {
     button.style.backgroundColor = "var(--clr-primary-txt)";
   });
@@ -474,7 +470,6 @@ async function init() {
   initTouchListeners();
 
   await render(true, true);
-  await displayRandomBibleVerse();
 }
 
 /** HIGHLIGHTING STUFF **/
