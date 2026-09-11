@@ -10,7 +10,7 @@ const PROJECTS_SECTION = document.getElementById("projects");
 const FOOTER_SECTION = document.getElementById("footer");
 const MAIN_CONTENT_SECTION = document
   .getElementById("main-content")
-  ?.getElementsByClassName("container-content")[0];
+  ?.querySelector(".pane-content");
 
 const COLORS = ["text-blue", "text-orange", "text-pink"];
 
@@ -335,16 +335,21 @@ function goToPreviousItem() {
 }
 
 function scrollMainContentDown() {
-  MAIN_CONTENT_SECTION?.scrollBy({
-    top: MAIN_CONTENT_SECTION.clientHeight / 2,
-  });
+  document
+    .querySelectorAll("#main-content .pane-content")
+    .forEach((element) =>
+      element?.scrollBy({ top: element.clientHeight / 2 }),
+    );
 }
 
 function scrollMainContentUp() {
-  MAIN_CONTENT_SECTION?.scrollBy({
-    top: -(MAIN_CONTENT_SECTION.clientHeight / 2),
-  });
+  document
+    .querySelectorAll("#main-content .pane-content")
+    .forEach((element) =>
+      element?.scrollBy({ top: -(element.clientHeight / 2) }),
+    );
 }
+
 
 function initKeyboardListeners() {
   // CTRL key is only captured on keydown/keyup
@@ -380,6 +385,17 @@ function initKeyboardListeners() {
     } else if (key === "ArrowRight" || key === "l") {
       goToNextSection();
       scrollToTop = true;
+    } else if (key === "Enter" || key === " ") {
+      if (currentPosition.sectionIndex === 0) {
+        return;
+      }
+
+      const currentItem =
+        left_sections[currentPosition.sectionIndex]?.items?.[
+        currentPosition.sectionItemIndex
+        ];
+      currentItem?.querySelector("a")?.click();
+      return;
     } else if (code.includes("Digit")) {
       const sectionNumber = parseInt(key) - 1;
       goToSection(sectionNumber);
@@ -424,6 +440,33 @@ function initTouchListeners() {
     onHamburgerMenuPress();
   });
 }
+
+function showToast(message) {
+  const toast = document.getElementById("copy-toast");
+  if (toast == null) {
+    return;
+  }
+
+  toast.textContent = message;
+  toast.style.opacity = "1";
+
+  if (showToast._timer != null) {
+    clearTimeout(showToast._timer);
+  }
+  showToast._timer = setTimeout(() => {
+    toast.style.opacity = "0";
+  }, 2000);
+}
+
+function copyEmail() {
+  const email = "robinjamshidi@gmail.com";
+  navigator.clipboard
+    .writeText(email)
+    .then(() => showToast("Email copied to clipboard"))
+    .catch(() => showToast("Could not copy - select the email manually"));
+}
+
+
 
 async function init() {
   initKeyboardListeners();
@@ -706,3 +749,4 @@ const arduinoKeywords = [
   ],
   [...cKeywords[1], "long", "int", "swich", "case", "break"],
 ];
+

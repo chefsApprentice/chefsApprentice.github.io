@@ -29,8 +29,8 @@
     content="Hi, I'm an experienced software engineer from London. Check out my work and get in touch over here ;)">
   <meta name="twitter:image" content="/images/social-banner.jpg">
 
-  <link href="images/favicon-light.ico" rel="icon" media="(prefers-color-scheme: light)" />
-  <link href="images/favicon-dark.ico" rel="icon" media="(prefers-color-scheme: dark)" />
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤓</text></svg>" />
   <link rel="preload" as="font" href="fonts/fira-mono-v14-latin-regular.woff2" type="font/otf" crossorigin="anonymous">
   <link rel="preload" as="font" href="fonts/fira-mono-v14-latin-700.woff2" type="font/otf" crossorigin="anonymous">
   <link id="min-style" rel="stylesheet" type="text/css" href="css/tui.min.css">
@@ -57,7 +57,7 @@
           <div class="container-content">
             <div class="title decorating-text">
               <p>
-                Home
+                About
               </p>
               <div></div>
             </div>
@@ -89,9 +89,14 @@
               <!--   <div>Digital Alchemist</div> -->
               <!--   <div>@ <span class="text-orange">ByteBakers</span></div> -->
               <!-- </div> -->
-              <div><img src="images/linked_in.svg" alt="" decoding="async" /><a>LinkedIn</a></div>
-              <div><img src="images/git.svg" alt="" decoding="async" /><a>GitHub</a></div>
-              <div><img src="images/email.svg" alt="" decoding="async" /><a>Email: robinjamshidi [at] gmail [dot]
+              <div><img src="images/linked_in.svg" alt="" decoding="async" /><a
+                  href="https://www.linkedin.com/in/robin-jamshidi-667304290/" target="_blank"
+                  rel="noopener noreferrer">LinkedIn</a></div>
+              <div><img src="images/github.svg" alt="" decoding="async" /><a href="https://github.com/chefsapprentice"
+                  target="_blank" rel="noopener noreferrer">GitHub</a></div>
+              <div><img src="images/email.svg" alt="" decoding="async" /><a id="email-copy"
+                  href="mailto:robinjamshidi@gmail.com" onclick="copyEmail(); return false;">Email: robinjamshidi [at]
+                  gmail [dot]
                   com</a></div>
             </div>
           </div>
@@ -129,93 +134,291 @@
               <div></div>
             </div>
             <div id="skills-index" class="list-index decorating-text">
-              <p>1 of 24</p>
+              <p>1 of 27</p>
               <div></div>
             </div>
             <div class="ui-list">
-              <div><img src="images/go.svg" alt="" decoding="async" />Go</div>
-              <div><img src="images/c.svg" alt="" decoding="async" />C</div>
-              <div><img src="images/html.svg" alt="" decoding="async" />HTML</div>
-              <div><img src="images/css.svg" alt="" decoding="async" />CSS</div>
+              <div><img src="images/c.svg" alt="" decoding="async" />C / C++</div>
+              <div><img src="images/java.svg" alt="" decoding="async" />Java</div>
+              <div><img src="images/python.svg" alt="" decoding="async" />Python</div>
               <div><img src="images/js.svg" alt="" decoding="async" />JavaScript</div>
               <div><img src="images/ts.svg" alt="" decoding="async" />TypeScript</div>
-              <div><img src="images/node.svg" alt="" decoding="async" />Node.js</div>
+              <div><img src="images/html.svg" alt="" decoding="async" />HTML</div>
+              <div><img src="images/css.svg" alt="" decoding="async" />CSS</div>
+              <div><img src="images/react.svg" alt="" decoding="async" />React</div>
+              <div><img src="images/lua.svg" alt="" decoding="async" />Lua</div>
+              <div><img src="images/psql.svg" alt="" decoding="async" />SQL / PostgreSQL</div>
+              <div><img src="images/redis.svg" alt="" decoding="async" />Redis</div>
               <div><img src="images/gql.svg" alt="" decoding="async" />GraphQL</div>
-              <div><img src="images/psql.svg" alt="" decoding="async" />PostgreSQL</div>
-              <div><img src="images/test.svg" alt="" decoding="async" />Automated Testing</div>
-              <div><img src="images/react.svg" alt="" decoding="async" />React (Native)</div>
-              <div><img src="images/bash.svg" alt="" decoding="async" />Bash</div>
-              <div><img src="images/gh.svg" alt="" decoding="async" />GitHub Actions</div>
+              <div><img src="images/docker.svg" alt="" decoding="async" />Docker</div>
+              <div><img src="images/kubernetes.svg" alt="" decoding="async" />Kubernetes</div>
+              <div><img src="images/grpc.svg" alt="" decoding="async" />gRPC</div>
+              <div><img src="images/kafka.svg" alt="" decoding="async" />Apache Kafka</div>
+              <div><img src="images/websockets.svg" alt="" decoding="async" />WebSockets</div>
               <div><img src="images/aws.svg" alt="" decoding="async" />AWS</div>
+              <div><img src="images/azure.svg" alt="" decoding="async" />Azure</div>
               <div><img src="images/git.svg" alt="" decoding="async" />Git</div>
-              <div><img src="images/arduino.svg" alt="" decoding="async" />Arduino</div>
+              <div><img src="images/github.svg" alt="" decoding="async" />GitHub</div>
               <div><img src="images/linux.svg" alt="" decoding="async" />Linux</div>
-              <div><img src="images/shopify.svg" alt="" decoding="async" />Shopify Apps</div>
-              <div><img src="images/arch.svg" alt="" decoding="async" />Software Architecture
-              </div>
-              <div><img src="images/ux.svg" alt="" decoding="async" />UX Design</div>
-              <div><img src="images/so.svg" alt="" decoding="async" />StackOverflow</div>
-              <div><img src="images/ai.svg" alt="" decoding="async" />AI Assisted Programming
-              </div>
-              <div><img src="images/lang.svg" alt="" decoding="async" />Human Languages</div>
-              <div><img src="images/neovim.svg" alt="" decoding="async" />Neovim</div>
+              <div><img src="images/neovim.svg" alt="" decoding="async" />Vim</div>
             </div>
           </div>
         </div>
       </div>
       <div id="right-section">
-        <div class="container h-fill h-full" id="main-content">
-          <div class="outer-paragraph-container">
-            <div class="inner-paragraph-container">
-              <div id="experience">
-                <div>
-                  <h1>
-                    <span class="text-blue">
-                      Experience
-                    </span>
-                  </h1>
-                  <div class="ui-list">
-                    <div><img src="images/linked_in.svg" alt="" decoding="async" /><a>LinkedIn</a></div>
-                    <div><img src="images/git.svg" alt="" decoding="async" /><a>GitHub</a></div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div id="projects">
-                  <div>
-                    <h1>
-                      <span class="text-orange">
-                        Projects
-                      </span>
-                    </h1>
-                    <div class="ui-list">
-                      <div><img src="images/linked_in.svg" alt="" decoding="async" /><a>LinkedIn</a></div>
-                      <div><img src="images/git.svg" alt="" decoding="async" /><a>GitHub</a></div>
+        <div id="main-content">
+          <div class="pane" id="experience">
+            <div class="pane-title">
+              <p><span class="text-blue">Experience</span></p>
+              <div></div>
+            </div>
+            <div class="pane-content">
+              <div class="experience-list">
+                <div class="experience-item">
+                  <div class="experience-header">
+                    <h2 class="experience-title">Software Placement</h2>
+                    <div class="experience-meta">
+                      <span class="experience-sep text-blue">Procter &amp; Gamble</span>
+                      <span class="experience-sep">-</span>
+                      <span class="experience-sep text-green">Newcastle</span>
+                      <span class="experience-sep">-</span>
+                      <span class="experience-sep text-orange">Jun 2025 - Jun 2026</span>
                     </div>
                   </div>
+                  <p class="experience-description">
+                    Grew into the technical lead for an agentic AI app that
+                    pulls a tangle of legacy R&amp;D systems together - Python
+                    and LangChain on a FastAPI backend, React up front, all
+                    sat on Docker and Azure to make engineers' lives a little
+                    easier. Took it from requirements to production: roadmap,
+                    stakeholder conv, security reviews, CI/CD and deployment,
+                    the whole arc. Along the way tightened up SAP delivery
+                    with some standards and internal tooling that trimmed
+                    defects and shaved weeks off timelines across a few
+                    divisions.
+                  </p>
+                </div>
+                <div class="experience-item">
+                  <div class="experience-header">
+                    <h2 class="experience-title">Software Lead</h2>
+                    <div class="experience-meta">
+                      <span class="experience-sep text-blue">Orixa FM</span>
+                      <span class="experience-sep">-</span>
+                      <span class="experience-sep text-green">Remote</span>
+                      <span class="experience-sep">-</span>
+                      <span class="experience-sep text-orange">Jan 2026 - Jun 2026</span>
+                    </div>
+                  </div>
+                  <p class="experience-description">
+                    Led the mobile push at Orixa FM and drove it to the app
+                    stores. Wired up Redis, SQL and Python caching so the maps
+                    and artist discovery features hold up when the crowd
+                    shows up, with the Swift front-ends to match.
+                  </p>
+                </div>
+                <div class="experience-item">
+                  <div class="experience-header">
+                    <h2 class="experience-title">Programming Tutor</h2>
+                    <div class="experience-meta">
+                      <span class="experience-sep text-blue">Fun Tech</span>
+                      <span class="experience-sep">-</span>
+                      <span class="experience-sep text-green">Remote</span>
+                      <span class="experience-sep">-</span>
+                      <span class="experience-sep text-orange">Jul 2024 - Sep 2024</span>
+                    </div>
+                  </div>
+                  <p class="experience-description">
+                    Taught week-long Java and Lua courses to kids of every
+                    ability, pair-programming a stack of mid-size projects per
+                    student and riding along on that sweet "oh, it clicked"
+                    moment.
+                  </p>
                 </div>
               </div>
+            </div>
+          </div>
+          <div class="pane" id="projects">
+            <div class="pane-title">
+              <p><span class="text-orange">Projects</span></p>
+              <div></div>
+            </div>
+            <div class="pane-content">
+              <div class="project-list">
+                <div class="project-item">
+                  <div class="project-text">
+                    <h2 class="experience-title">
+                      MORS
+                      <span class="text-orange">(2026)</span>
+                      <a href="https://github.com/chefsapprentice" class="experience-link" target="_blank"
+                        rel="noopener noreferrer">
+                        [GitHub]
+                      </a>
+                    </h2>
+                    <p class="experience-description">
+                      A distributed real-time chat platform designed as a
+                      systems project. Uses WebSockets for low-latency
+                      communication and asynchronous microservices for
+                      resilient message processing. An event-driven
+                      architecture with Apache Kafka and Kubernetes supports
+                      horizontal scaling through partitioning, replication
+                      and eventual consistency.
+                    </p>
+                    <div class="technologies-row">
+                      <span class="technology-prefix">technologies:</span>
+                      <span class="text-green">Java</span>,
+                      <span class="text-blue">Quarkus</span>,
+                      <span class="text-orange">Kafka</span>,
+                      <span class="text-pink">WebSockets</span>,
+                      <span class="text-blue">Kubernetes</span>
+                    </div>
+                  </div>
+                  <img class="project-screenshot" src="images/findleads2.webp" alt="MORS screenshot" decoding="async" />
+                </div>
+                <!-- <div class="project-item"> -->
+                <!--   <div class="project-text"> -->
+                <!--     <h2 class="experience-title"> -->
+                <!--       Neovim Pair Programming -->
+                <!--       <span class="text-orange">(2026)</span> -->
+                <!--     </h2> -->
+                <!--     <p class="experience-description"> -->
+                <!--       A C++ plugin that brings collaborative pair programming -->
+                <!--       to Neovim. A concurrent editing layer handles multiple -->
+                <!--       simultaneous writes through optimistic concurrency and -->
+                <!--       operational transforms, similar in principle to the -->
+                <!--       collaborative cursors of Google Docs, with conflict -->
+                <!--       resolution applied locally before documents synchronise. -->
+                <!--     </p> -->
+                <!--     <div class="technologies-row"> -->
+                <!--       <span class="technology-prefix">technologies:</span> -->
+                <!--       <span class="text-orange">C++</span>, -->
+                <!--       <span class="text-blue">Neovim</span>, -->
+                <!--       <span class="text-green">WebSockets</span> -->
+                <!--     </div> -->
+                <!--   </div> -->
+                <!--   <img -->
+                <!--     class="project-screenshot" -->
+                <!--     src="images/shopicsv2.webp" -->
+                <!--     alt="Neovim pair programming screenshot" -->
+                <!--     decoding="async" -->
+                <!--   /> -->
+                <!-- </div> -->
+                <div class="project-item">
+                  <div class="project-text">
+                    <h2 class="experience-title">
+                      Redis Clone
+                      <span class="text-orange">(2026)</span>
+                    </h2>
+                    <p class="experience-description">
+                      A Redis-compatible in-memory store implemented in C++
+                      from scratch. Includes a custom TCP server, buffered
+                      I/O and connection handling, a hash-map
+                      store, and binary data serialisation.
+                    </p>
+                    <div class="technologies-row">
+                      <span class="technology-prefix">technologies:</span>
+                      <span class="text-orange">C++</span>,
+                      <span class="text-orange">TCP</span>,
+                      <span class="text-blue">Data Serialisation</span>
+                    </div>
+                  </div>
+                  <img class="project-screenshot" src="images/redis_clone.png" alt="Redis clone screenshot"
+                    decoding="async" />
+                </div>
+                <div class="project-item">
+                  <div class="project-text">
+                    <h2 class="experience-title">
+                      Web Browser from scratch
+                      <span class="text-orange">(2025)</span>
+                      <a href="https://github.com/chefsapprentice/WebBrowser" class="experience-link" target="_blank"
+                        rel="noopener noreferrer">
+                        [GitHub]
+                      </a>
+                    </h2>
+                    <p class="experience-description">
+                      A custom web browser written in Python. Implements parsing,
+                      tokenisation and tree structures, together with request
+                      and socket handling, to render HTML pages directly from
+                      raw network traffic.
+                    </p>
+                    <div class="technologies-row">
+                      <span class="technology-prefix">technologies:</span>
+                      <span class="text-orange">Python</span>
+                    </div>
+                  </div>
+                  <img class="project-screenshot" src="images/web_browser.png" alt="Web Browser screenshot"
+                    decoding="async" />
+                </div>
+                <div class="project-item">
+                  <div class="project-text">
+                    <h2 class="experience-title">
+                      Group voting AI
+                      <span class="text-orange">RHUL Hackathon 7</span>
+                      <a href="https://github.com/chefsapprentice/RoyalHackathon7" class="experience-link"
+                        target="_blank" rel="noopener noreferrer">
+                        [GitHub]
+                      </a>
+                    </h2>
+                    <p class="experience-description">
+                      A group project completed within 48 hours that detects
+                      the thumb up-to-down ratio within a group using
+                      TensorFlow, returning a live vote result.
+                    </p>
+                    <div class="technologies-row">
+                      <span class="technology-prefix">technologies:</span>
+                      <span class="text-orange">Python</span>,
+                      <span class="text-blue">TensorFlow</span>
+                    </div>
+                  </div>
+                  <img class="project-screenshot" src="images/aiHackathon.png" alt="Group voting AI screenshot"
+                    decoding="async" />
+                </div>
+                <div class="project-item">
+                  <div class="project-text">
+                    <h2 class="experience-title">
+                      Debate social media application
+                      <span class="text-orange">2024</span>
+                      <a href="https://github.com/chefsApprentice/Debate" class="experience-link"
+                        target="_blank" rel="noopener noreferrer">
+                        [GitHub]
+                      </a>
+                    </h2>
+                    <p class="experience-description">
+                   A debate social media full stack app, made for the IB diploma. Made inorder to create and reply to debates.                    </p>
+                    <div class="technologies-row">
+                      <span class="technology-prefix">technologies:</span>
+                      <span class="text-orange">Typescript</span>,
+                      <span class="text-blue">GraphQl</span>,
+                      <span class="text-green">NodeJS</span>
+                    </div>
+                  </div>
+                  <img class="project-screenshot" src="images/debate.png" alt="Debate app screenshot"
+                    decoding="async" />
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
       </div>
     </div>
-    <footer class="container text-blue" id="footer">
-      <div class="footer-item" id="footer-help">
-        &lt;pgup&gt;/&lt;pgdown&gt;: Scroll,
-        &lt;left&gt;/&lt;right&gt;: Switch section,
-        &lt;1-4&gt;: Jump to section,
-        &lt;up&gt;/&lt;down&gt;: Switch item
-        <span class="text-pink">
-          (or just use the mouse)
-        </span>
-      </div>
-      <div class="footer-item">
-          <span class="text-green"> Robin Jamshidi Portfolio </span>
-          <span class="text-blue"> v1.0.0 </span>
-      </div>
-    </footer>
   </div>
+  <footer class="container text-blue" id="footer">
+    <div class="footer-item" id="footer-help">
+      &lt;pgup&gt;/&lt;pgdown&gt;: Scroll,
+      &lt;left&gt;/&lt;right&gt;: Switch section,
+      &lt;1-3&gt;: Jump to section,
+      &lt;up&gt;/&lt;down&gt;: Switch item
+      <span class="text-pink">
+        (or just use the mouse)
+      </span>
+    </div>
+    <div class="footer-item">
+      <span class="text-blue"> Robin Jamshidi Portfolio </span>
+      <span class="text-green"> v1.0.0 </span>
+    </div>
+  </footer>
+  </div>
+  <div id="copy-toast" class="copy-toast" role="status" aria-live="polite"></div>
 </body>
 
 </html>
